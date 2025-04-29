@@ -98,7 +98,36 @@ public class CalculatriceActivity extends AppCompatActivity {
         });
         //TODO AJOUTER UN BOUTON "CALCULER" dans un menu burger
         // AU CLICK SUR LE BOUTON CALCULER JE FAIS UN TOAST AVEC LE RESULTAT DE L'OPERATION
+        MenuItem boutonCalculer = menu.findItem(R.id.bouton_calculer);
+        boutonCalculer.setOnMenuItemClickListener(v -> faisLeCalcul());
         return super.onCreateOptionsMenu(menu);
+    }
+
+    private boolean faisLeCalcul() {
+        Integer resultat=0 ;
+        if(typeOperation==null){
+            Toast.makeText(this,"PAS D'OPERATION",Toast.LENGTH_LONG).show();
+        }else{
+            switch (typeOperation){
+                case ADD:
+                    resultat = premierElement+deuxiemeElement;
+                    break;
+                case SUBSTRACT:
+                    resultat = premierElement-deuxiemeElement;
+                    break;
+                case MULTIPLY:
+                    resultat = premierElement*deuxiemeElement;
+                    break;
+                case DIVIDE:
+                    resultat = premierElement/deuxiemeElement;
+                    break;
+                default:
+                    Toast.makeText(this,"PAS D'OPERATION",Toast.LENGTH_LONG).show();
+            }
+            Toast.makeText(this,resultat.toString(),Toast.LENGTH_LONG).show();
+        }
+
+        return true;
     }
 
     private void ajouterChiffre(Integer chiffre){

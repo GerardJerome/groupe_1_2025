@@ -16,4 +16,5 @@
     <string name="multiplier" translatable="false">x</string>
     <string name="diviser" translatable="false">/</string>
     <string name="bouton_reset">RAZ</string>
+    <string name="bouton_calculer">Calculer</string>
 </resources>

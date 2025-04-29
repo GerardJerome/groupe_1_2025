@@ -2,5 +2,6 @@
 <resources>
     <string name="bouton_calculatrice">Calculatrice en allemand</string>
     <string name="bouton_reset">RAZ en allemand</string>
+    <string name="bouton_calculer"> Calculer en allemand</string>
 
 </resources>

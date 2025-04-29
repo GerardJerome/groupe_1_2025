@@ -6,4 +6,7 @@
         android:id="@+id/bouton_raz"
         android:title="@string/bouton_reset"
         app:showAsAction="always" />
+    <item
+        android:id="@+id/bouton_calculer"
+        android:title="@string/bouton_calculer" />
 </menu>
