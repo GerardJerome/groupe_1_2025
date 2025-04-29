@@ -3,6 +3,7 @@ package com.example.groupe_1_2025;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -87,6 +88,16 @@ public class CalculatriceActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.monmenu,menu);
+        MenuItem boutonRAZ = menu.findItem(R.id.bouton_raz);
+        boutonRAZ.setOnMenuItemClickListener(v -> {
+            premierElement =0;
+            deuxiemeElement =0;
+            typeOperation=null;
+            textViewCalcul.setText("");
+            return true;
+        });
+        //TODO AJOUTER UN BOUTON "CALCULER" dans un menu burger
+        // AU CLICK SUR LE BOUTON CALCULER JE FAIS UN TOAST AVEC LE RESULTAT DE L'OPERATION
         return super.onCreateOptionsMenu(menu);
     }
 
